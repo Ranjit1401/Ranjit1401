@@ -1,0 +1,33 @@
+---
+const projects = [
+  { id:"01", slug:"prospectiq", title:"ProspectIQ", category:"Sales intelligence · AI agents", image:"/projects/prospectiq.png", description:"An enterprise AI decision-intelligence platform for prospect research, stakeholder mapping, risk signals, and evidence-backed outreach strategy.", repo:"https://github.com/Ranjit1401/ProspectIQ" },
+  { id:"02", slug:"mediscan-ai", title:"MediScan AI", category:"Health AI · Generative AI", image:"/projects/mediscan.png", description:"Medicine information and side-effects checker built around a conversational AI experience, with medicine search and strip scanning.", repo:"https://github.com/Ranjit1401/Medicsan_ai" },
+  { id:"03", slug:"ner", title:"NER Disaster & Logistics Command Center", category:"Hackathon-winning project · Geospatial intelligence", image:"/projects/ner-command-center.png", description:"A disaster-response and logistics dashboard combining incident intelligence, route risk, map-based monitoring, dispatch approvals, and operational status.", repo:"https://github.com/Ranjit1401/NER" },
+  { id:"04", slug:"microgrid", title:"AI Smart Microgrid Simulator", category:"Energy systems · Simulation", image:"/projects/microgrid.png", description:"An interactive microgrid simulation interface for monitoring demand, supply, battery levels, weather inputs, and power distribution.", repo:"https://github.com/Ranjit1401/AI-Smart-Microgrid-Simulator" },
+  { id:"05", slug:"pose-analyzer", title:"Pose Analyzer", category:"Computer vision · Pose estimation", image:"/projects/pose-analyzer.png", description:"A computer-vision application for pose estimation and body-keypoint analysis, with a simple entry experience.", repo:"https://github.com/Ranjit1401/Pose-Analyzer" }
+];
+---
+<main class="projects-showcase">
+  <header class="showcase-heading">
+    <p class="section-label">Selected work / 2025—2026</p>
+    <h1 class="text-display">PROJECTS<br/> & BUILDS</h1>
+    <p class="showcase-intro">A selection of AI systems, intelligent applications, and engineering experiments.</p>
+  </header>
+  {projects.map((project, i) => (
+    <section class="project-panel stack-section" style={`z-index:${i+1};`}>
+      <div class="project-meta">
+        <span class="project-index text-display">{project.id}</span>
+        <div class="project-meta-right"><span>{project.category}</span><span>RANJIT BHARDWAJ · PROJECTS</span></div>
+      </div>
+      <a class="project-preview interactive" href={`/projects/${project.slug}/`} aria-label={`View ${project.title} details`}>
+        <img src={project.image} alt={`${project.title} interface screenshot`} loading={i===0 ? "eager" : "lazy"}/>
+        <span class="preview-open">EXPLORE PROJECT ↗</span>
+      </a>
+      <div class="project-bottom">
+        <div><h2 class="text-display">{project.title}</h2><p>{project.description}</p></div>
+        <div class="project-actions"><a href={`/projects/${project.slug}/`}>VIEW DETAILS ↗</a><a href={project.repo} target="_blank" rel="noopener noreferrer">GITHUB ↗</a></div>
+      </div>
+    </section>
+  ))}
+</main>
+

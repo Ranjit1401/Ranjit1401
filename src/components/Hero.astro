@@ -1,0 +1,25 @@
+<section class="hero-section hero-container">
+  <header class="hero-nav">
+    <a href="/" style="display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none">
+      <div class="hero-logo" style="display:grid;place-items:center;font-family:Anton,sans-serif;font-size:22px">RB</div>
+      <div><div style="font-family:Anton,sans-serif;font-size:18px;letter-spacing:2px;text-transform:uppercase;line-height:1">RANJIT BHARDWAJ</div><div style="font-size:10px;letter-spacing:3px;opacity:.5;font-weight:600;text-transform:uppercase">AI / ML · BACKEND</div></div>
+    </a>
+    <div class="hero-nav-actions"><a href="/projects/" class="btn-primary" style="padding:10px 24px">Explore</a></div>
+  </header>
+  <div class="hero-centre">
+    <div class="hero-eyebrow">Backend Developer &middot; AI/ML Engineer &middot; Student</div>
+    <h1 class="hero-title text-display" style="overflow:hidden;text-align:center">RANJIT BHARDWAJ</h1>
+    <p class="hero-tagline">Building intelligent solutions with AI, engineering scalable backends,<br class="br-desktop"/> and turning ideas into impact.</p>
+    <div class="hero-ctas"><a href="/projects/" class="btn-primary">View My Work</a><a href="mailto:ranjitbhardwaj1401@gmail.com" class="btn-outline">Get In Touch</a></div>
+  </div>
+  <div class="hero-stats-bar">
+    <div class="hero-stat"><div style="font-family:Anton,sans-serif;font-size:22px" >AI / ML</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:.5;font-weight:600;margin-top:2px">Focus</div></div>
+    <div class="hero-stat"><div style="font-family:Anton,sans-serif;font-size:22px">2028</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:.5;font-weight:600;margin-top:2px">Graduation</div></div>
+    <div class="hero-stat"><div style="font-family:Anton,sans-serif;font-size:22px" >8.0</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:.5;font-weight:600;margin-top:2px">CGPA</div></div>
+    <div class="hero-stat"><div style="font-family:Anton,sans-serif;font-size:22px">India</div><div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;opacity:.5;font-weight:600;margin-top:2px">Based in</div></div>
+  </div>
+</section>
+<script>
+ import gsap from 'gsap';
+ window.initHero = function(container=document){ container.querySelectorAll('.hero-container').forEach(c=>{const title=c.querySelector('.hero-title');if(!title||title.dataset.initialized)return;const text=title.innerText;title.innerHTML='';text.split('').forEach(char=>{const s=document.createElement('span');s.innerText=char;s.className='split-char';s.style.cssText='display:inline-block;transform:translateY(105%);opacity:0;will-change:transform';title.appendChild(s)});title.dataset.initialized='true';gsap.to(c.querySelectorAll('.split-char'),{y:'0%',opacity:1,duration:1.2,stagger:.04,ease:'power4.out',delay:.6});gsap.fromTo(c.querySelectorAll('.hero-tagline,.hero-ctas,.hero-stat'),{y:22,opacity:0},{y:0,opacity:1,duration:.8,stagger:.12,ease:'power3.out',delay:1.2})})}
+</script>

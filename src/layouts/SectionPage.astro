@@ -1,0 +1,21 @@
+---
+import Layout from "./Layout.astro";
+import Footer from "../components/Footer.astro";
+const { title, eyebrow, description } = Astro.props;
+---
+<Layout uid={Astro.url.pathname}>
+  <main class="inner-page">
+    <header class="inner-header">
+      <a class="brand" href="/"><span class="brand-mark">RB</span><span><b>RANJIT BHARDWAJ</b><small>AI / ML · BACKEND</small></span></a>
+      <a class="home-link" href="/">HOME ↗</a>
+    </header>
+    <section class="inner-content">
+      {Astro.url.pathname !== "/about/" && <p class="eyebrow">{eyebrow}</p>}
+      {Astro.url.pathname !== "/about/" && <h1>{title}</h1>}
+      {Astro.url.pathname !== "/about/" && description && <p class="lead">{description}</p>}
+      <slot />
+    </section>
+    <Footer />
+  </main>
+</Layout>
+
