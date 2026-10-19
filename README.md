@@ -2,7 +2,7 @@
 
 ### AI/ML Engineer | Full-Stack Developer | AI Agents Enthusiast | Open Source Contributor
 
-I'm a **2nd-year B.Tech student in Computer Science & Engineering (Artificial Intelligence & Machine Learning)** at **Lokmanya Tilak College of Engineering**.
+I'm a **3rd-year B.Tech student in Computer Science & Engineering (Artificial Intelligence & Machine Learning)** at **Lokmanya Tilak College of Engineering**.
 
 I enjoy building practical AI-powered applications, intelligent agents, and full-stack systems that solve real-world problems. I'm particularly interested in **Generative AI, Agentic AI, Machine Learning, and scalable software systems**.
 
